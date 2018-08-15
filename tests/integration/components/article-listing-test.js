@@ -4,7 +4,7 @@ import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import EmberObject from '@ember/object';
 
-module('Integration | Component | rental listing', function (hooks) {
+module('Integration | Component | article listing', function (hooks) {
   setupRenderingTest(hooks);
 
   hooks.beforeEach(function () {
@@ -16,7 +16,7 @@ module('Integration | Component | rental listing', function (hooks) {
     });
   });
 
-  test('should display rental details', async function(assert) {
+  test('should display article details', async function(assert) {
     await render(hbs`{{article-listing article=article}}`);
     assert.equal(this.element.querySelector('.listing h3').textContent.trim(), 'test-title', 'Title: test-title');
     assert.equal(this.element.querySelector('.listing .summerize').textContent.trim(), 'coucou', 'coucou');
