@@ -1,17 +1,17 @@
 {{yield}}
-<article class="listing">
-  <div class="content-wrapper">
-    <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+<a target="_blank" href="{{article.link}}">
+  <article class="listing">
+    <div class="content-wrapper">
       <img src="{{article.image}}" alt="">
-    </a>
-    <div class="coucou">
-      <h3>{{article.title}}</h3>
-      <div class="detail summerize">
-        {{article.summerize}}
+      <div class="coucou">
+          <h3>{{article.title}}</h3>
+        <div class="detail summerize">
+          {{article.summerize}}
+        </div>
       </div>
     </div>
-  </div>
-  <div class=" date">
-    {{article.created}}
-  </div>
-</article>
+    <div class=" date">
+      {{article.created}}
+    </div>
+  </article>
+</a>

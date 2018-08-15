@@ -278,6 +278,7 @@ p {
     margin: 0;
     font-weight: 300;
     font-style: italic;
+    color: black;
 }
 
 .listing .detail span {
@@ -339,12 +340,16 @@ p {
 
 .date {
   text-align: right;
+  color: black;
 }
 
 @media screen and (max-width: 640px) {
   .listing img {
     display:none;
   }
+}
+
+@media screen and (max-width: 780px) {
   .listing .detail {
     width: 100%;
     padding: 10px 0px;
