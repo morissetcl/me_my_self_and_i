@@ -1,15 +1,17 @@
 {{yield}}
 <article class="listing">
-  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
-    <img src="{{article.image}}" alt="">
-    <small>View Larger</small>
-  </a>
-
-  <h3>{{article.title}}</h3>
-  <div class="detail summerize">
-    {{article.summerize}}
+  <div class="content-wrapper">
+    <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+      <img src="{{article.image}}" alt="">
+    </a>
+    <div class="coucou">
+      <h3>{{article.title}}</h3>
+      <div class="detail summerize">
+        {{article.summerize}}
+      </div>
+    </div>
   </div>
-  <div class="detail ok">
-    {{article.created_at}}
+  <div class=" date">
+    {{article.created}}
   </div>
 </article>
