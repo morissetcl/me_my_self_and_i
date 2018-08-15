@@ -38,9 +38,8 @@ export default function() {
   this.get('/articles', function (db, request) {
    return { data: articles };
   });
-  // Find and return the provided rental from our rental list above
+
   this.get('/articles/:id', function (db, request) {
    return { data: articles.find((article) => request.params.id === article.id) };
   });
-
 }
