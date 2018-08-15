@@ -48,4 +48,30 @@ export default function() {
       }]
     };
   });
+
+  this.get('/gems', function() {
+    return {
+      data: [{
+          type: 'gems',
+          id: 'see_double',
+          attributes: {
+            created: '05/10/17',
+            title: "See_Double Gem",
+            summerize: "A small tool CLI to monitoring your FEATURE specs and check your duplication. SeeDouble go through all your specs and count the number of occurence of your 'expect' and 'result'.",
+            image: 'http://www.krugerpark.co.za/images/1suricate-590a.jpg',
+            link: 'https://github.com/morissetcl/see_double'
+        }
+      }, {
+        type: 'gems',
+        id: 'conchiterz',
+        attributes: {
+          created: '05/02/17',
+          title: 'Conchiterz Gem',
+          summerize: 'A simply gem to feminize french word/sentence.',
+          image: 'https://imageresizer.static9.net.au/qdNswstJvDH-FWwogoTZGSqrpzY=/480x270/http%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FNetwork%2FImages%2F2017%2F05%2F15%2F15%2F58%2Fconchitafix1505_2.jpg',
+          link: 'https://github.com/morissetcl/conchiterz'
+        }
+      }]
+    };
+  });
 }
