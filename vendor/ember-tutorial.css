@@ -297,14 +297,11 @@ p {
     margin-top: 10px;
 }
 
-.show-listing .rental-pic {
-    width: 50%;
+.show-listing .article-pic {
+    width: 100%;
     height: initial;
     position: static;
 }
-/**
- * Utilities
- */
 
 .light {
     font-weight: 300;

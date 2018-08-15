@@ -4,8 +4,7 @@
     <img src="{{article.image}}" alt="">
     <small>View Larger</small>
   </a>
-
-  <h3>{{article.title}}</h3>
+  <h3>{{#link-to "articles.show" article class=article.id}}{{article.title}}{{/link-to}}</h3>
   <div class="detail summerize">
     {{article.summerize}}
   </div>
