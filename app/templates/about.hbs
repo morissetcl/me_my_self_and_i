@@ -1,8 +1,23 @@
 <div class="jumbo">
-  <h2>About Super Rentals</h2>
-  <p>
-    The Super Rentals website is a delightful project created to explore Ember.
-    By building a property rental site, we can simultaneously imagine traveling
-    AND building Ember applications.
-  </p>
+  <div class="doudou">
+    <h2>Me Myself & I</h2>   <label>{{input type="checkbox" checked=showLongMessage}} Show me the other one</label>
+  </div>
+  <div id="liquid-spacer-demo">
+    {{#liquid-spacer growDuration=250}}
+      {{#if showLongMessage}}
+        <br>
+        <h3>Ok let's talk a bit..</h3>
+        <br>
+        <p>I'm living in Paris in the 18th distric, close to Montmartre. I grew up in Normandy and I travel a bit throughout France. Le Havre, Annecy, Paris..to my studies, mainly in marketing, I was graduated from business school in 2011.</p>
+        <p>After 2/3 years of work and moove during 1 year in Toronto, Canada. Simply to improve my poor english and work as garde-manger, cooker and also as salesman within wine industry.</p>
+
+      {{else}}
+        <br>
+        <h3>Nice try, if you want the know me by the conventionnal way just click on the link below:</h3>
+        <a target="_blank" href="https://www.linkedin.com/in/cl%C3%A9ment-morisset-6a546465/">
+          I want to know you by the conventionnal way
+        </a>
+      {{/if}}
+    {{/liquid-spacer}}
+  </div>
 </div>

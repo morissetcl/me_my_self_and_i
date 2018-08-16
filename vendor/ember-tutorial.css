@@ -366,3 +366,22 @@ p {
     padding: 10px 0px;
   }
 }
+
+.doudou {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.coucou {
+  display: flex;
+}
+@media screen and (max-width: 780px) {
+  .coucou {
+    flex-direction: column;
+  }
+}
+.poste {
+  font-style: italic;
+  margin-left: 20px;
+}
