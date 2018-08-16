@@ -6,7 +6,7 @@ export default function(){
     this.fromRoute('gems'),
     this.fromRoute('articles'),
     this.fromRoute('contact'),
-    this.use('toLeft', { duration: duration }),
-    this.reverse('toLeft', { duration: duration })
+    this.use('toUp', { duration: duration }),
+    this.reverse('toUp', { duration: duration })
   );
 }
