@@ -343,7 +343,7 @@ p {
   color: black;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 450px) {
   em {
     display:none;
   }
@@ -384,4 +384,22 @@ p {
 .poste {
   font-style: italic;
   margin-left: 20px;
+}
+
+address {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+address a:hover {
+  color: #e46855;
+}
+
+.email {
+  font-size: 1.5em;
+}
+
+.fa-lg {
+  font-size: 2.5em;
 }
