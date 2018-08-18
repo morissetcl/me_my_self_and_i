@@ -343,7 +343,7 @@ p {
   color: black;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 450px) {
   em {
     display:none;
   }
@@ -365,4 +365,41 @@ p {
     width: 100%;
     padding: 10px 0px;
   }
+}
+
+.doudou {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.coucou {
+  display: flex;
+}
+@media screen and (max-width: 780px) {
+  .coucou {
+    flex-direction: column;
+  }
+}
+.poste {
+  font-style: italic;
+  margin-left: 20px;
+}
+
+address {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+address a:hover {
+  color: #e46855;
+}
+
+.email {
+  font-size: 1.5em;
+}
+
+.fa-lg {
+  font-size: 2.5em;
 }
