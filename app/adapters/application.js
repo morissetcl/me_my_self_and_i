@@ -1,12 +1,18 @@
-import Ember from 'ember';
-import JSONAPIAdapter from 'ember-data/adapters/json-api';
+// import Ember from 'ember';
+// import JSONAPIAdapter from 'ember-data/adapters/json-api';
+//
+// const { String: { pluralize, underscore } } = Ember;
+//
+// export default JSONAPIAdapter.extend({
+//
+//   pathForType(type) {
+//     return pluralize(underscore(type));
+//   }
+//
+// });
 
-const { String: { pluralize, underscore } } = Ember;
+import DS from 'ember-data';
 
-export default JSONAPIAdapter.extend({
-
-  pathForType(type) {
-    return pluralize(underscore(type));
-  }
-
+export default DS.JSONAPIAdapter.extend({
+  host: 'https://mmandi-api.herokuapp.com'
 });
