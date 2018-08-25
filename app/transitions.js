@@ -3,7 +3,7 @@ export default function(){
 
   this.transition(
     this.fromRoute('about'),
-    this.fromRoute('gems'),
+    this.fromRoute('gemstorys'),
     this.fromRoute('articles'),
     this.fromRoute('contact'),
     this.use('toUp', { duration: duration }),
