@@ -1,5 +1,12 @@
-import DS from 'ember-data';
+import Ember from 'ember';
+import JSONAPIAdapter from 'ember-data/adapters/json-api';
 
-export default DS.JSONAPIAdapter.extend({
-  namespace: 'api'
+const { String: { pluralize, underscore } } = Ember;
+
+export default JSONAPIAdapter.extend({
+
+  pathForType(type) {
+    return pluralize(underscore(type));
+  }
+
 });

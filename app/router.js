@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('articles');
-  this.route('gems');
+  this.route('gemstorys', { path: '/gems' });
   this.route('home');
 });
 

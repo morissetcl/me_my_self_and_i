@@ -49,10 +49,10 @@ export default function() {
     };
   });
 
-  this.get('/gems', function() {
+  this.get('/gemstorys', function() {
     return {
       data: [{
-          type: 'gems',
+          type: 'gemstorys',
           id: 'see_double',
           attributes: {
             created: '05/10/17',
@@ -62,12 +62,12 @@ export default function() {
             link: 'https://github.com/morissetcl/see_double'
         }
       }, {
-        type: 'gems',
+        type: 'gemstorys',
         id: 'conchiterz',
         attributes: {
           created: '05/02/17',
           title: 'Conchiterz Gem',
-          summerize: 'A simply gem to feminize french word/sentence.',
+          summerize: 'A simply gemstory to feminize french word/sentence.',
           image: 'https://imageresizer.static9.net.au/qdNswstJvDH-FWwogoTZGSqrpzY=/480x270/http%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FNetwork%2FImages%2F2017%2F05%2F15%2F15%2F58%2Fconchitafix1505_2.jpg',
           link: 'https://github.com/morissetcl/conchiterz'
         }
