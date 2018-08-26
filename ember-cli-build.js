@@ -5,10 +5,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     dotEnv: {
-      clientAllowedKeys: ['CLOUD_NAME', 'CLOUDINARY_API_KEY'],
-      path: {
-        development: '/.env'
-      }
+      clientAllowedKeys: ['CLOUD_NAME', 'CLOUDINARY_API_KEY']
     }
   });
   // Use `app.import` to add additional libraries to the generated
