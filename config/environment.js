@@ -23,18 +23,16 @@ module.exports = function(environment) {
     }
   };
 
-  ENV['cloudinary'] = {
-    cloudName: 'dlna8yzfyj',
-    apiKey: '154493939746818'
-  }
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-
+    ENV['cloudinary'] = {
+      cloudName: 'CLOUD_NAME',
+      apiKey: 'CLOUDINARY_API_KEY'
+    },
     ENV['ember-cli-mirage'] = {
       enabled: false
     }
@@ -51,6 +49,6 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
   }
-  
+
   return ENV;
 };
