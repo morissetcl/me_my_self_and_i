@@ -23,30 +23,19 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['cloudinary'] = {
+    cloudName: 'CLOUD_NAME',
+    apiKey: 'CLOUDINARY_API_KEY'
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV['cloudinary'] = {
-      cloudName: 'CLOUD_NAME',
-      apiKey: 'CLOUDINARY_API_KEY'
-    },
     ENV['ember-cli-mirage'] = {
       enabled: false
-    }
-  }
-
-  if (environment === 'production') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV['cloudinary'] = {
-      cloudName: 'CLOUD_NAME',
-      apiKey: 'CLOUDINARY_API_KEY'
     }
   }
 
