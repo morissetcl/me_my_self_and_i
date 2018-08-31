@@ -5,5 +5,6 @@ export default DS.Model.extend({
   summerize: DS.attr(),
   link: DS.attr(),
   createdAt: DS.attr(),
-  image: DS.attr()
+  image: DS.attr(),
+  tags: DS.attr()
 });
