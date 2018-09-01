@@ -1,6 +1,0 @@
-{
-  "name": "me-my-self-and-i",
-  "dependencies": {
-    "cloudinary-jquery-file-upload": "^2.0.6"
-  }
-}
