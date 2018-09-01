@@ -159,7 +159,7 @@ p {
 
 .results li {
     list-style: none;
-    padding: 10px 15px;
+    padding-bottom: 10px;
 }
 
 .menu .results li:hover {
@@ -206,7 +206,6 @@ p {
  */
 
 .listing {
-    margin-top: 15px;
     background-color: #f6f6f6;
     padding: 15px 50px;
     min-height: 145px;
@@ -344,7 +343,7 @@ p {
   color: black;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 477px) {
   em {
     display:none;
   }
@@ -434,4 +433,29 @@ address a {
   color: #f9f9f9;
   padding-top: 20px;
   text-align: center;
+}
+
+.ember-text-field {
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 2px;
+  border: 1px solid #1a0841;
+
+}
+
+.filter-input {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 780px) {
+  .filter-input {
+    justify-content: center;
+    width: 100%;
+  }
+  .ember-text-field {
+    width: 100%;
+  }
 }

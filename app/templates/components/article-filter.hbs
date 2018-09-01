@@ -1,5 +1,8 @@
-{{input value=value
-        key-up=(action 'handleFilterEntry')
-        class="light"
-        placeholder="Filter By Keywords"}}
-{{yield results}}
+<div class="filter-input">
+  {{input value=value
+          key-up=(action 'handleFilterEntry')
+          class="light"
+          placeholder="Filter by keywords"}}
+        </div>
+
+  {{yield results}}
