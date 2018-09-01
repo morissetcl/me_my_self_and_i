@@ -2,6 +2,13 @@
   <h2>Articles.</h2>
   <p>Actually Medium articles I wrote...give me five !</p>
 </div>
-{{#each model as |article|}}
-  {{article-listing article=article}}
-{{/each}}
+
+{{#article-filter
+   filter=(action 'filterByTags')
+   as |filteredResults|}}
+  <ul class="results">
+    {{#each filteredResults as |article|}}
+      <li>{{article-listing article=article}}</li>
+    {{/each}}
+  </ul>
+{{/article-filter}}
