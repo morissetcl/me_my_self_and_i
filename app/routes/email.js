@@ -1,6 +1,15 @@
 import Route from '@ember/routing/route';
 
-export default DS.Model.extend({
-  email: DS.attr('string'),
-  content: DS.attr('string'),
+export default Route.extend({
+  model() {
+    return {};
+  },
+  actions: {
+    save() {
+      const newEmail = this.get('store').createRecord('email', this.currentModel);
+      newEmail.save().then((email) => {
+        this.transitionTo('emails');
+      });
+    }
+  }
 });

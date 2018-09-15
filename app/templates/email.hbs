@@ -1,1 +1,15 @@
-<h3>Post all</h3>
+<h3>Post New</h3>
+<form>
+  <div>
+    <label>Email:</label>
+    {{input type="text" value=model.email}}
+  </div>
+  <div>
+    <label>Content:</label>
+    {{textarea rows="5" value=model.content}}
+  </div>
+  <div>
+    <button {{action 'save'}}>Send</button>
+    <button {{action 'cancel'}}>Abbrechen</button>
+  </div>
+</form>

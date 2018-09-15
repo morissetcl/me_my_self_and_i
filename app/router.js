@@ -7,14 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('email');
+  this.route('email.new', { path: 'email/new' });
   this.route('about');
   this.route('contact');
   this.route('articles');
   this.route('gemstorys', { path: '/gems' });
   this.route('home');
-  this.route('email', function() {
-    this.route('new');
-  });
 });
 
 export default Router;
