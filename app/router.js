@@ -12,6 +12,9 @@ Router.map(function() {
   this.route('articles');
   this.route('gemstorys', { path: '/gems' });
   this.route('home');
+  this.route('email', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
