@@ -4,14 +4,14 @@
   <form>
     <div>
       <label>Email:</label>
-      {{input type="text" value=model.email}}
+      {{input type="text" value=emailEmail}}
     </div>
     <div>
       <label>Content:</label>
-      {{textarea rows="5" value=model.content}}
+      {{textarea rows="5" value=emailContent}}
     </div>
     <div>
-      <button {{action 'save'}}>Send</button>
+      <button {{action 'createEmail'}}>Send</button>
     </div>
   </form>
   <address>
