@@ -7,10 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('email');
-  this.route('email.new', { path: 'email/new' });
+  this.route('email', { path: '/contact' });
   this.route('about');
-  this.route('contact');
   this.route('articles');
   this.route('gemstorys', { path: '/gems' });
   this.route('home');
