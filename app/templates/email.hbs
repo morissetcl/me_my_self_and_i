@@ -1,9 +1,22 @@
 <div class="jumbo">
   <h2>Get in touch.</h2>
   <p>Feel free to contact me..regardless of the reason.</p>
+  <form>
+    <div>
+      <label>Email:</label>
+      {{input type="text" value=model.email}}
+    </div>
+    <div>
+      <label>Content:</label>
+      {{textarea rows="5" value=model.content}}
+    </div>
+    <div>
+      <button {{action 'save'}}>Send</button>
+      <button {{action 'cancel'}}>Abbrechen</button>
+    </div>
+  </form>
   <address>
     <div class="bla">
-      <a href="mailto:morissetcl87@gmail.com" class='email'>morissetcl87@gmail.com</a>
       <a href="https://www.linkedin.com/in/cl%C3%A9ment-morisset-6a546465">{{fa-icon "linkedin" size="lg"}}</a>
       <a href="https://medium.com/@clementrollon">{{fa-icon "medium" size="lg"}}</a>
       <a href="https://github.com/morissetcl">{{fa-icon "github" size="lg"}}</a>
