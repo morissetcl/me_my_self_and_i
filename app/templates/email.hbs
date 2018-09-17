@@ -1,24 +1,49 @@
 <div class="jumbo">
   <h2>Get in touch.</h2>
   <p>Feel free to contact me..regardless of the reason.</p>
+</div>
+<div class='cocou'>
   <form>
     <div>
-      <label>Email:</label>
-      {{input type="text" value=emailEmail}}
+      {{paper-input class="flex-30" label="E-mail" type="email" value=emailEmail onChange=(action (mut emailEmail))}}
     </div>
     <div>
-      <label>Content:</label>
-      {{textarea rows="5" value=emailContent}}
+      {{paper-input textarea=true block=true label="Content" maxlength=500 passThru=(hash rows=5 maxRows=5)
+  value=emailContent onChange=(action (mut emailContent))}}
     </div>
     <div>
-      <button {{action 'createEmail'}}>Send</button>
+      {{#paper-button raised=true onClick=(action "createEmail")}}Send{{/paper-button}}
     </div>
   </form>
-  <address>
-    <div class="bla">
-      <a href="https://www.linkedin.com/in/cl%C3%A9ment-morisset-6a546465">{{fa-icon "linkedin" size="lg"}}</a>
-      <a href="https://medium.com/@clementrollon">{{fa-icon "medium" size="lg"}}</a>
-      <a href="https://github.com/morissetcl">{{fa-icon "github" size="lg"}}</a>
-    </div>
-  </address>
+
+
+{{#paper-speed-dial
+  onMouseEnter=(action (mut open2) true) onMouseLeave=(action (mut open2) false)
+  open=open2 onToggle=(action (mut open2)) hoverFull=hoverFull as |dial|}}
+  {{#dial.trigger}}
+    {{#paper-button fab=true}}
+      {{paper-icon "menu"}}
+    {{/paper-button}}
+  {{/dial.trigger}}
+
+  {{#dial.actions as |actions|}}
+    {{#actions.action}}
+      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+        {{fa-icon "linkedin" size="lg"}}
+      {{/paper-button}}
+    {{/actions.action}}
+
+    {{#actions.action}}
+      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+        {{fa-icon "medium" size="lg"}}
+      {{/paper-button}}
+    {{/actions.action}}
+
+    {{#actions.action}}
+      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+        {{fa-icon "github" size="lg"}}
+      {{/paper-button}}
+    {{/actions.action}}
+  {{/dial.actions}}
+{{/paper-speed-dial}}
 </div>

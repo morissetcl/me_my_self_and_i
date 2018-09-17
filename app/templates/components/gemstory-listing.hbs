@@ -1,17 +1,17 @@
 {{yield}}
 <a target="_blank" href="{{gemstory.link}}">
-  <article class="listing">
-    <div class="content-wrapper">
-      {{cloudinary-image gemstory.image.url}}
-      <div class="coucou">
-          <h3>{{gemstory.title}}</h3>
-        <div class="detail summerize">
-          {{gemstory.summerize}}
-        </div>
-      </div>
-    </div>
-    <div class=" date">
+  {{#paper-card as |card|}}
+    {{cloudinary-image gemstory.image.url}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{gemstory.title}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      {{gemstory.summerize}}
+    {{/card.content}}
+    {{#card.actions}}
       {{moment-format gemstory.createdAt 'MM-DD-YYYY'}}
-    </div>
-  </article>
+    {{/card.actions}}
+  {{/paper-card}}
 </a>
