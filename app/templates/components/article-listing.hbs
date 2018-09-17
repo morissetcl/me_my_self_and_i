@@ -1,17 +1,17 @@
 {{yield}}
 <a target="_blank" href="{{article.link}}">
-  <article class="listing">
-    <div class="content-wrapper">
-      {{cloudinary-image article.image.url}}
-      <div class="coucou">
-          <h3>{{article.title}}</h3>
-        <div class="detail summerize">
-          {{article.summerize}}
-        </div>
-      </div>
-    </div>
-    <div class=" date">
+  {{#paper-card as |card|}}
+    {{cloudinary-image article.image.url}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{article.title}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      {{article.summerize}}
+    {{/card.content}}
+    {{#card.actions}}
       {{moment-format article.createdAt 'MM-DD-YYYY'}}
-    </div>
-  </article>
+    {{/card.actions}}
+  {{/paper-card}}
 </a>
