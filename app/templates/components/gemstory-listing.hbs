@@ -1,17 +1,2 @@
 {{yield}}
-<a target="_blank" href="{{gemstory.link}}">
-  {{#paper-card as |card|}}
-    {{cloudinary-image gemstory.image.url}}
-    {{#card.title as |title|}}
-      {{#title.text as |text|}}
-        {{gemstory.title}}
-      {{/title.text}}
-    {{/card.title}}
-    {{#card.content}}
-      {{gemstory.summerize}}
-    {{/card.content}}
-    {{#card.actions}}
-      {{moment-format gemstory.createdAt 'MM-DD-YYYY'}}
-    {{/card.actions}}
-  {{/paper-card}}
-</a>
+{{card-pattern objectName=gemstory}}

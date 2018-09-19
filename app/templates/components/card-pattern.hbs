@@ -1,0 +1,17 @@
+{{yield}}
+<a target="_blank" href="{{objectName.link}}">
+  {{#paper-card as |card|}}
+    {{cloudinary-image objectName.image.url}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{objectName.title}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      {{objectName.summerize}}
+    {{/card.content}}
+    {{#card.actions}}
+      {{moment-format objectName.createdAt 'MM-DD-YYYY'}}
+    {{/card.actions}}
+  {{/paper-card}}
+</a>

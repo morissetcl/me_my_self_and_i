@@ -1,17 +1,2 @@
 {{yield}}
-<a target="_blank" href="{{article.link}}">
-  {{#paper-card as |card|}}
-    {{cloudinary-image article.image.url}}
-    {{#card.title as |title|}}
-      {{#title.text as |text|}}
-        {{article.title}}
-      {{/title.text}}
-    {{/card.title}}
-    {{#card.content}}
-      {{article.summerize}}
-    {{/card.content}}
-    {{#card.actions}}
-      {{moment-format article.createdAt 'MM-DD-YYYY'}}
-    {{/card.actions}}
-  {{/paper-card}}
-</a>
+{{card-pattern objectName=article}}
