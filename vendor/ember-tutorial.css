@@ -503,12 +503,14 @@ md-card-content {
 
 .cocou {
   display: flex;
-  padding: 0 100px;
+  padding: 15px 100px;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-form {
+.oklm {
   width: 60%;
+  min-width: 350px;
 }
 
 md-fab-trigger {
