@@ -1,0 +1,30 @@
+{{yield}}
+{{#paper-speed-dial
+  onMouseEnter=(action (mut open2) true) onMouseLeave=(action (mut open2) false)
+  open=open2 onToggle=(action (mut open2)) hoverFull=hoverFull as |dial|}}
+  {{#dial.trigger}}
+    {{#paper-button fab=true}}
+      {{paper-icon "menu"}}
+    {{/paper-button}}
+  {{/dial.trigger}}
+
+  {{#dial.actions as |actions|}}
+    {{#actions.action}}
+      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+        {{fa-icon "linkedin" size="lg"}}
+      {{/paper-button}}
+    {{/actions.action}}
+
+    {{#actions.action}}
+      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+        {{fa-icon "medium" size="lg"}}
+      {{/paper-button}}
+    {{/actions.action}}
+
+    {{#actions.action}}
+      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+        {{fa-icon "github" size="lg"}}
+      {{/paper-button}}
+    {{/actions.action}}
+  {{/dial.actions}}
+{{/paper-speed-dial}}
