@@ -51,6 +51,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "liquid-fire": "^0.29.5",
     "loader.js": "^4.2.3",
+    "node-sass": "^4.9.3",
     "sass": "^1.13.4"
   },
   "engines": {
