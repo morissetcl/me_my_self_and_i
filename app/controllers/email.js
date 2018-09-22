@@ -9,7 +9,14 @@ export default Controller.extend({
         email: emailEmail,
         content: emailContent
       })
-      newEmail.save()
+      newEmail.validate()
+              .then(({ validations }) => {
+                if (validations.get('isValid')) {
+                  newEmail.save()
+                } else {
+                  alert('bouuuuuh')
+                }
+              });
     }
   }
 });
