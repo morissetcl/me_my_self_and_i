@@ -1,6 +1,7 @@
 {
   "name": "me-my-self-and-i",
   "dependencies": {
-    "cloudinary-jquery-file-upload": "^2.0.6"
+    "cloudinary-jquery-file-upload": "^2.0.6",
+    "sweetalert": "~1.1.0"
   }
 }
