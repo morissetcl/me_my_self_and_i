@@ -516,3 +516,7 @@ md-card-content {
 md-fab-trigger {
   margin-top: 18px;
 }
+
+button.confirm {
+  background-color: #e91e63 !important;
+}

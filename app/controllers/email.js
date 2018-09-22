@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import swal from 'sweetalert'
 
 export default Controller.extend({
   actions: {
@@ -13,8 +14,9 @@ export default Controller.extend({
               .then(({ validations }) => {
                 if (validations.get('isValid')) {
                   newEmail.save()
+                  swal("Email send", " I will answer you ASAP.", "success")
                 } else {
-                  alert('bouuuuuh')
+                  swal("Aie", "Please check and try again.",  "error" )
                 }
               });
     }
