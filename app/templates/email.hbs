@@ -3,17 +3,7 @@
   <p>Feel free to contact me..regardless of the reason.</p>
 </div>
 <div class='cocou'>
-  <form>
-    <div>
-      {{paper-input class="flex-30" label="E-mail" type="email" value=emailEmail onChange=(action (mut emailEmail))}}
-    </div>
-    <div>
-      {{paper-input textarea=true block=true label="Content" maxlength=500 passThru=(hash rows=5 maxRows=5)
-  value=emailContent onChange=(action (mut emailContent))}}
-    </div>
-    <div>
-      {{#paper-button raised=true onClick=(action "createEmail")}}Send{{/paper-button}}
-    </div>
-  </form>
+  {{email-form model=model save=(action "save") class='oklm'}}
   {{social-media}}
 </div>
+{{ErrorClass}}

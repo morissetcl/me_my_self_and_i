@@ -9,22 +9,28 @@
   {{/dial.trigger}}
 
   {{#dial.actions as |actions|}}
-    {{#actions.action}}
-      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
-        {{fa-icon "linkedin" size="lg"}}
-      {{/paper-button}}
-    {{/actions.action}}
+      {{#actions.action}}
+        <a target="_blank" href="https://www.linkedin.com/in/cl%C3%A9ment-morisset-6a546465/">
+          {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+            {{fa-icon "linkedin" size="lg"}}
+          {{/paper-button}}
+        </a>
+      {{/actions.action}}
 
-    {{#actions.action}}
-      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
-        {{fa-icon "medium" size="lg"}}
-      {{/paper-button}}
-    {{/actions.action}}
+      {{#actions.action}}
+        <a target="_blank" href="https://medium.com/@clementrollon">
+          {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+            {{fa-icon "medium" size="lg"}}
+          {{/paper-button}}
+        </a>
+      {{/actions.action}}
 
-    {{#actions.action}}
-      {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
-        {{fa-icon "github" size="lg"}}
-      {{/paper-button}}
-    {{/actions.action}}
+      {{#actions.action}}
+        <a target="_blank" href="https://github.com/morissetcl">
+          {{#paper-button mini=true onClick=(action (mut showDialog) true)}}
+            {{fa-icon "github" size="lg"}}
+          {{/paper-button}}
+        </a>
+      {{/actions.action}}
   {{/dial.actions}}
 {{/paper-speed-dial}}
