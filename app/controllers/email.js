@@ -14,6 +14,8 @@ export default Controller.extend({
               .then(({ validations }) => {
                 if (validations.get('isValid')) {
                   newEmail.save()
+                  this.set('email', null);
+                  this.set('content', null);
                   swal("Email send", " I will answer you ASAP.", "success")
                 } else {
                   swal("Aie", "Please check and try again.",  "error" )
